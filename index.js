@@ -69,6 +69,7 @@ function processLength(list, callback) {
 */
 function processLastItem(stringList, callback) {
   /* CODE HERE */
+  return  callback(stringList[stringList.length-1])
 }
 
 /**
@@ -88,8 +89,12 @@ function processLastItem(stringList, callback) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList, callback) {
   /* CODE HERE */
+   const total = numberList.reduce(function(accumulator, currentValue ){
+     return accumulator + currentValue
+   }, 0)
+   return callback(total)
 }
 
 /**
@@ -110,8 +115,9 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+    return callback(num1 * num2)
 }
 
 /**
